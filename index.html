@@ -529,26 +529,7 @@
 
             container.appendChild(forecastDiv);
         }
-<script>
 
-  function sendToN8N(lat, lon) {
-    fetch("https://maria3768.app.n8n.cloud/webhook/send-weather", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        latitude: lat,
-        longitude: lon
-      })
-    })
-    .then(res => res.json())
-    .then(data => {
-      console.log("Sent to n8n:", data);
-    })
-    .catch(err => {
-      console.error("Error sending to n8n:", err);
-    });
   }
 
   // Initialize
