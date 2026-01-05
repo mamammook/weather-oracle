@@ -297,10 +297,13 @@
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     
-    <script>
-        // Default coordinates from URL (Thailand - Udon Thani area)
-        let currentLat = 17.408695957518777;
-        let currentLng = 102.77854799592062;
+       <script>
+    // ค่าพิกัดเริ่มต้น (โรงเรียนสตรีราชินูทิศ)
+    const DEFAULT_LAT = 17.408696;
+    const DEFAULT_LNG = 102.778548;
+
+    let currentLat = DEFAULT_LAT;
+    let currentLng = DEFAULT_LNG;
 
         // Initialize map
         const map = L.map('map').setView([currentLat, currentLng], 7);
@@ -531,8 +534,8 @@
         }
 
         // Initialize
-        updateLocationInfo(currentLat, currentLon);
-        fetchWeatherData(currentLat, currentLon);
+        updateLocationInfo(DEFAULT_LAT, DEFAULT_LNG);
+fetchWeatherData(DEFAULT_LAT, DEFAULT_LNG);
     </script>
 </body>
 </html>
